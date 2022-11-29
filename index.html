@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <title>2nd homework</title>
+       
+    </head>
+    <body>
+        <header>
+            <div class="brand">1777</div>
+            <nav> <b>LUDZA TOWN</b></nav>
+            <div class='tools'>1777</div>
+        </header>
+        <style>
+
+body {
+    background: rgb(239, 234, 226);
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    font-size: 2em;
+    grid-gap: 30px;
+    grid-template-areas:
+        "header"
+        "hero"
+        "body"
+        "footer"
+}
+header {
+    background: rgb(239, 188, 111);
+    padding: 10px;
+    text-align: center;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+        "brand brand"
+        "nav tools";
+}
+
+header .brand {
+    background: rgb(176, 137, 54);
+    grid-area: brand;
+}
+
+header nav {
+    background: rgb(99, 57, 24);
+    grid-area: nav;
+}
+
+header .tools {
+    background: rgb(176, 137, 54);
+    grid-area: tools;
+}
+.hero {
+    background: rgb(99, 57, 24);
+    padding: 10px;
+    grid-area: hero;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+        "action";
+}
+
+.hero .action {
+    background: rgb(161, 144, 91);
+    grid-area: action;
+}
+
+.hero .feature {
+    background: rgb(194, 154, 68);
+    grid-area: feature;
+}
+main {
+    background: rgb(101, 73, 37);
+    padding: 10px;
+    grid-area: body;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-template-areas: 
+        "feature"
+        "ad"
+        "listing";
+}
+
+main .feature {
+    background: rgb(192, 146, 29);
+    grid-area: feature;
+}
+
+main .mobile-ad {
+    grid-area: ad;
+}
+
+main .listing {
+    background: rgb(159, 123, 73);
+    grid-area: listing;
+}
+
+footer {
+    background: rgb(82, 54, 15);
+    padding: 10px;
+    grid-area: footer;
+    text-align: center;
+    grid-gap: 10px;
+}
+
+.desktop-ad {
+    grid-area: ad;
+    display: none;
+}
+
+.hero .feature {
+    display: none;
+}
+
+.sidebar {
+    background: rgb(93, 65, 22);
+    padding: 10px;
+    display: none;
+    grid-area: sidebar;
+}
+.sidebar .feature {
+    background: rgb(160, 126, 74);
+    height: 100%;
+}
+.mobile-ad img {
+    vertical-align: top;
+    width: 100%;
+}
+
+.desktop-ad img {
+    vertical-align: top;
+    width: 350px;
+}
+
+.mobile-ad:hover {
+    opacity: 0.5;
+}
+
+.desktop-ad:hover {
+    opacity: 0.5;
+}
+@media (min-width: 576px) {
+    body {
+        grid-template-rows: auto auto 1fr auto auto;
+        grid-template-areas:
+            "header"
+            "hero"
+            "body"
+            "sidebar"
+            "footer";
+    }
+    header {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas:
+            "brand nav tools";
+    }
+    .sidebar {
+        display: grid;
+    }
+
+    .mobile-ad img {
+        width: 200px;
+    }
+    .hero {
+        grid-template-areas:
+            "feature"
+            "action";
+    }
+
+    .hero .feature {
+        display: block;
+    }
+    main {
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas:
+            "feature ad"
+            "listing listing";
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        grid-template-columns: 1fr 350px;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "header header"
+            "hero ad"
+            "body sidebar"
+            "footer footer"
+    }
+    .hero {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "feature action"
+    }
+    main {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "feature listing"
+    }
+    .mobile-ad {
+        display: none;
+    }
+    .desktop-ad {
+        display: block;
+    }
+}
+</style>
+<div class="hero">
+    <div class="feature">
+        <p>Ludza has many relatively well-preserved old wooden buildings, some of which are of cultural and historical significance.</p>
+    </div>
+    <div class='action'>
+        <p>The population as of 2020 was 7,667.</p>
+    </div>
+</div>
+
+<div class="desktop-ad"><img src="Ludza_2012._gads.jpg" alt="Ad"></div>
+
+<main>
+    <article class="feature"><p>Ludza is the oldest city in Latvia.</p>
+         <p>Ludza is a city of Latgale in a picturesque area, with a lovely old town that is built along the lake,
+        with ruins of a medieval castle in the city center, a church on the top of the hill, lovely wooden and brick one-story,
+        and two-story houses with closed backyards on narrow streets.</p></article>
+    <div class="mobile-ad"><img src="Ludza_2012._gads.jpg" alt="Ad"></div>
+    <article class="listing">
+        <p>In 1777, when Latgale Region was annexed to Russia, Ludza became the centre of the county, developing as a trade centre, the second largest town after Daugavpils City.</p>
+        <p>During the Latvian independence times Ludza was an economically and socially active town with 238 companies, 356 shops, a splendid Catholic Church, a hospital, a school, a railway station, a museum.
+        But in the fire of 1938 and during the WWII the town almost lost its entire wooden architecture and strategically important buildings.</p>
+        <p>Ludza have always been located at the crossroads going from Europe to wide Russian lands, and this fact defined its inhabitants’ and land’s destiny. Russians, Swedish, Polish and German invaders occupied this territory. 
+        During existence of Ludza representatives of various confessions and nationalities came here for living – Estonians, Russian Old-believers, Ukrainians, Belarusians, Jewish.</p>
+    </article>
+</main>
+
+<div class="sidebar">
+    <div class="feature">
+        <p>The most visited sights are:
+
+           <ul> <li>Ludza History Museum and open-air exposition</li>
+            <li> Orthodox Church</li>
+                <li>Old Believers' Church</li>
+                    <li> Ruins of the medieval Ludza Castle</li>
+                        <li>Ludza Craftsmen Centre</li>
+                            <li>Several lakes offer fishing and water tourism possibilities.</li></ul>
+    </p>
+</div>
+</div>
+
+<footer style="color:white">Kristiana RTU 2022</footer>
+</body>
+</html>
